@@ -47,6 +47,10 @@ table {
 	border-spacing: 0;
 }
 
+img {
+	display: block;
+	width: 100%;
+}
 
 .blind {
 	position: absolute;
