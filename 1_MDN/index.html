@@ -22,11 +22,18 @@
 <body>
     <h1 class="blind">MDN Web Docs</h1>
 
+    <nav class="nav-skip">
+        <a href="#header">go to menu and search bar</a>
+        <a href="#developer">go to developer information</a>
+        <a href="#content">go to hacks blog and contributed section</a>
+        <a href="#footer">go to section about mdn and mozilla</a>
+    </nav>
+
     <section class="content-container">
-        <header class="header">
+        <header id="header" class="header">
             <h2 class="blind">MDN Web Docs menus</h2>
 
-            <img src="res/mdn_title.png" alt="MDN Web Dogs" class="title-image">
+            <img src="res/MDN_Web_Docs_01.svg" alt="MDN Web Dogs" class="title-image">
 
             <button class="btn-menu"><img src="https://developer.mozilla.org/static/media/menu-open.c10ee936.svg" alt="" class="btn-menu__icon"></button>
             <ul class="menu">
@@ -85,7 +92,8 @@
             </form>
         </header>
 
-        <section class="develop-info">
+        <section id="#developer" class="develop-info">
+            <h2 class="blind">developer information</h2>
             <section class="develop-info__wrap">
                 <h3 class="develop-info__desc">Resources for developers, by developers.</h3>
     
@@ -98,7 +106,8 @@
         </section>
 
 
-        <section class="content">
+        <section id="content" class="content">
+            <h2 class="blind">blog feed and contributed section</h2>
             <section class="content__blog-feed">
 
                 <h3 class="title title-content content__title">Hacks Blog</h3>
@@ -119,6 +128,41 @@
                             <p class="posts__author">Posted Wednesday, October 20, 2021 by Xavier Harding</p>
                         </article>
                     </li>
+                    <li class="posts__item">
+                        <article class="posts__post">
+                            <h4 class="posts__title"><a href="#none" class="link posts__link">Lots to see in Firefox 93!</a></h4>
+                            <p class="desc posts__content">Firefox 93 comes with lots of lovely updates including AVIF image format support, filling of XFA-based forms in its PDF viewer and protection against insecure downloads by blocking downloads relying on insecure connections.The post Lots to see in Firefox 93! appeared first on Mozilla Hacks - the Web developer blog.</p>
+                            <p class="posts__author">Posted Friday, October 8, 2021 by Ruth John</p>
+                        </article>
+                    </li>
+                    <li class="posts__item">
+                        <article class="posts__post">
+                            <h4 class="posts__title"><a href="#none" class="link posts__link">Implementing form filling and accessibility in the Firefox PDF viewer</a></h4>
+                            <p class="desc posts__content">Last year, during lockdown, many discovered the importance of PDF forms when having to deal remotely with administrations and large organizations like banks. Firefox supported displaying PDF forms, but it didn’t support filling them: users had to print them, fill them by hand, and scan them back to digital form. We decided it was time to reinvest in the PDF viewer (PDF.js) and support filling PDF forms within Firefox to make our users' lives easier.The post Implementing form filling and accessibility in the Firefox PDF viewer appeared first on Mozilla Hacks - the Web developer blog.</p>
+                            <p class="posts__author">Posted Thursday, October 7, 2021 by bdahl</p>
+                        </article>
+                    </li>
+                    <li class="posts__item">
+                        <article class="posts__post">
+                            <h4 class="posts__title"><a href="#none" class="link posts__link">Control your data for good with Rally</a></h4>
+                            <p class="desc posts__content">In a world where data and AI are reshaping society, people currently have no tangible way to put their data to work for the causes they believe in. To address this, we built the Rally platform, a first-of-its-kind tool that enables you to contribute your data to specific studies and exercise consent at a granular level. Mozilla Rally puts you in control of your data while building a better Internet and a better society. The post Control your data for good with Rally appeared first on Mozilla Hacks - the Web developer blog.</p>
+                            <p class="posts__author">Posted Wednesday, October 6, 2021 by Melissa Thermidor
+
+                            </p>
+                        </article>
+                    </li>
+                    <li class="posts__item">
+                        <article class="posts__post">
+                            <h4 class="posts__title"><a href="#none" class="link posts__link">Tab Unloading in Firefox 93
+                            </a></h4>
+                            <p class="desc posts__content">Starting with Firefox 93, Firefox will monitor available system memory and, should it ever become so critically low that a crash is imminent, Firefox will respond by unloading memory-heavy but not actively used tabs. This feature is currently enabled on Windows and will be deployed later for macOS and Linux as well.The post Tab Unloading in Firefox 93 appeared first on Mozilla Hacks - the Web developer blog.
+
+                            </p>
+                            <p class="posts__author">Posted Tuesday, October 5, 2021 by Haik Aftandilian
+
+                            </p>
+                        </article>
+                    </li>
 
                 </ul>
             </section>
@@ -136,11 +180,11 @@
             </section>
         </section>
 
-        <footer class="footer">
+        <footer id="footer" class="footer">
             <h2 class="blind">About MDN Web Docs</h2>
             <section class="footer__wrap">
                 <!-- <section class="mdn-info"> -->
-                    <img src="res/mdn_title.png" alt="" class="footer__title-image">
+                    <img src="res/MDN_Web_Docs_01.svg" alt="" class="footer__title-image">
                     <ul class="mdn-info__category">
                         <li class="category__item"><a href="#none" class="link-footer category__link">Web Technologies</a></li>
                         <li class="category__item"><a href="#none" class="link-footer category__link">Learn Web Development</a></li>
@@ -171,11 +215,13 @@
                 
     
                 <section class="mdn-info__license">
+                    <h3 class="blind">license</h3>
                     <small class="license__letter">&copy; 2005-2021 Mozilla and individual contributors. Content is
                         available under <a href="#none" class="link-footer">these licenses</a>.</small>
                 </section>
     
                 <section class="mdn-info__legal">
+                    <h3 class="blind">legal info</h3>
                     <ul class="legal__requirements">
                         <li class="requirements__item"><a href="#none" class="link-footer requirements__link">Terms</a></li>
                         <li class="requirements__item"><a href="#none" class="link-footer requirements__link">Privacy</a></li>
@@ -184,9 +230,8 @@
                 </section>
             </section>
         </footer>
-
-
-
+    </section>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
