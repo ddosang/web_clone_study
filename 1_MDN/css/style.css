@@ -19,15 +19,20 @@
 /* header */
 .header {
     max-width: 1400px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
     padding: 36px 24px 12px;
     position: relative;
 }
 
+.header__content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 70px;
+}
+
 .title-image {
-    display: inline-block;
+    display: inline;
     width: 200px;
     height: 50px;
 }
@@ -36,14 +41,14 @@
 .btn-menu {
     display: none;
     position: absolute;
-    top: 50%;
+    top: 55px;
     right: 0;
     padding: 10px 20px;
     border: none;
     background-color: transparent;
     transform: translateY(-50%);
-
 }
+
 
 .btn-menu__icon {
     width: 21px;
@@ -53,7 +58,7 @@
 .menu {
     min-width: 575px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .btn {
@@ -76,14 +81,6 @@
     border-left: 10px solid #000;
     margin-right: 10px;
 }
-
-.menu__btn {
-    font-size: 16px;
-    font-family: arial;
-    font-weight: 700;
-    padding: 12px 12px 12px 0;
-}
-
 .menu__btn.on::before {
     display: inline-block;
     content: '';
@@ -95,15 +92,25 @@
     vertical-align: -5px;
 }
 
+.menu__btn {
+    font-size: 16px;
+    font-family: arial;
+    font-weight: 700;
+    padding: 12px 12px 12px 0;
+    /* width: 100%; */
+}
+
+
 .menu__sub-menu {
     display: none;
     position: absolute;
+    /* min-width: 230px; */
     z-index: 10;
-    width: 200px;
     border: 1px solid lightgray;
     border-radius: 5px;
     background-color: white;
     box-shadow: 0 0 4px rgba(0,0,0,0.5);
+    padding: 6px 0;
 }
 
 .menu__sub-menu.on {
@@ -114,8 +121,18 @@
 
 .menu__item {
     width : 100%;
-    padding: 7px;
+    padding: 6px 16px;
 }
+
+.menu__item:hover {
+    background-color: #1078af;
+}
+
+.menu__item:hover .menu__link {
+    color: white;
+}
+
+
 
 .menu__link {
     font-size: 16px;
@@ -411,6 +428,15 @@
         padding-bottom: 0;
     }
 
+    .header__content {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .menu {
+        justify-content: space-between;
+    }
+
     .search-form {
         margin-top: 10px;
     }
@@ -422,7 +448,7 @@
 
     /* 이거 다시 하면 그냥 가상요소 쓸듯.... */
     .search-form__btn {
-        left: calc(65% - 32px);
+        right: calc(35% + 12px);
     }
 
     .content {
@@ -465,14 +491,52 @@
     .title-image {
         width: 170px;
     }
-    .menu {
+    .header__content {
         display: none;
+        position: relative;
+    }
+    .menu {
+        grid-row: 2/3;
+        flex-direction: column;
     }
     .search-form {
-        display: none;
+        grid-row: 1/2;
     }
     .btn-menu {
         display: inline-block;
+    }
+    .btn-menu.on ~ .header__content  {
+        display: grid;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        right: 0;
+        padding: 0 24px 24px;
+        background-color: white;
+        z-index: 20;
+    }
+
+    .menu__sub-menu {
+        display: none;
+        width: 100%;
+        position: static;
+        box-shadow: none;
+        border: none;
+    }
+
+    .menu__sub-menu.on {
+        display: block;
+    }
+
+    .search-form {
+        width: 100%;
+    }
+    .search-form__input {
+        width: 100%;
+    }
+
+    .search-form__btn {
+        right: 12px;
     }
     
     .develop-info {
