@@ -1,0 +1,182 @@
+@import "variables";
+@import "mixin";
+
+* {
+    box-sizing: border-box;
+}
+
+.menu__title {
+    @include font-style($font-14, $fw-400, $gray);
+    &::after {
+        @include arrow;
+    }
+    &:hover {
+        background-color: $footer-backgray;
+    }
+}
+.menu__title.on::after {
+    transform: rotate(225deg);
+}
+
+
+
+.menu__sub-menu {
+    padding-top: 40px;
+}
+.sub-menu__category {
+    padding: 10px 32px;
+    @include font-style($font-14, $fw-700, $gray);
+}
+.sub-menu__category::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 1px;
+    margin-top: 10px;
+    background-color: $hover-lightgray;
+}
+.sub-menu__item {
+    line-height: 1.4;
+    padding: 8px 32px 4px;
+    &:hover {
+        background-color: $footer-backgray;
+    }
+    &:hover .sub-menu__title {
+        color: $blue;
+    }
+}
+.sub-menu__icon {
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+    float: left;
+}
+.sub-menu__title {
+    @include font-style($font-14, $fw-400, $gray);
+}
+.sub-menu__content {
+    @include font-style($font-12, $fw-400, $lightgray);
+}
+
+.button {
+    display: inline-block;
+    padding: 0 14px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    font-weight: 700;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 16px;
+}
+.button--blue {
+    background-color: $blue;
+    color: $white;
+    border-color: $blue;
+    &:hover {
+        background-color: $darkblue;
+    }
+}
+.button--transparent {
+    background: transparent;
+    color: $footer-lightgray;
+    border-color: $footer-lightgray;
+    &:hover {
+        background-color: $footer-lightgray;
+        color: $white;
+    }
+}
+.button--link {
+    @include font-style($font-14, $fw-400, $blue);
+}
+
+.card__title {
+    font-weight: 700;
+    color: $black;
+}
+.card__category {
+    font-weight: $fw-700;
+    color: $black;
+}
+.card__content {
+    color: $black;
+    padding: 8px 0;
+}
+.card--big {
+    width: 100%;
+    height: 650px;
+}
+.card--big__title {
+    font-size: $font-42;
+}
+.card--big__content, .card--medium__content {
+    font-weight: $fw-500;
+    font-size: $font-18;
+}
+.card__link {
+    @include font-style($font-14, $fw-700, $black);
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.card--medium {
+    padding: 36px 24px 24px;
+    width: 33.33%;
+    height: 500px;
+    background-color: gold;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.card--medium__category {
+    font-size: $font-18;
+    padding-bottom: 20px;
+}
+.card--medium__title {
+    font-size: 24px;
+}
+
+.card--small {
+    width: 260px;
+}
+.card--small__wrap {
+    padding: 12px;
+    padding-left: 32px;
+    font-size: $font-14;
+    color: $black;
+    background-color: $card-pink;
+}
+.card--small__category {
+    padding: 18px 0; 
+}
+.card--small__title {
+    padding-bottom: 12px;
+}
+.card--small__content {
+    padding-bottom: 20px;
+    font-weight: $fw-400;
+}
+.card--small__link {
+    font-weight: $fw-400;
+    text-decoration: underline;
+}
+.card--small__image {
+    width: 100%;
+}
+
+
+.menu--footer a {
+    line-height: 1.4;
+}
+.menu--footer__title {
+    @include font-style($font-14, $fw-700, $footer-gray);
+}
+.menu--footer__link {
+    padding: 4px 0;
+    line-height: 17px;
+    @include font-style($font-12, $fw-400, $footer-lightgray);
+    &:hover {
+        color: $hover-lightgray;
+    }
+}

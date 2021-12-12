@@ -54,3 +54,15 @@ img {
     width: 100%;
     vertical-align: top;
 }
+
+/* font */
+
+@import url('http://fonts.cdnfonts.com/css/adobe-clean');
+
+* {
+	font-family: 'Adobe Clean', sans-serif;
+}
+
+a {
+	color: #000;
+}
