@@ -1,6 +1,9 @@
+/* font */
+@import url('http://fonts.cdnfonts.com/css/adobe-clean');
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+    v2.0 | 20110126
+    License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
@@ -55,14 +58,22 @@ img {
     vertical-align: top;
 }
 
-/* font */
 
-@import url('http://fonts.cdnfonts.com/css/adobe-clean');
+/* custom */
 
-* {
+body {
 	font-family: 'Adobe Clean', sans-serif;
 }
 
 a {
 	color: #000;
+}
+
+.txt-hide {
+	position: absolute;
+	margin: -1px;
+	width: 1px;
+	height: 1px;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }

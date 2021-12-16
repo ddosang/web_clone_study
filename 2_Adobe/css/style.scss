@@ -1,0 +1,180 @@
+@import "variables";
+@import "mixin";
+
+.header {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    width: 100%;
+    height: 64px;
+    border-bottom: 1px solid $border-gray;
+}
+
+.header-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 1440px;
+    border-top: solid 1px $border-gray;
+    border-bottom: solid 1px $border-gray;
+    // box-shadow: 1px 3px 3px rgba(0 0 0 0.2);
+}
+
+.menu-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.title_logo {
+    @include font-style($font-18, $fw-700, $red);
+    padding: 0 20px;
+}
+.title_logo::before {
+    display: inline-block;
+    content: '';
+    width: 25px;
+    height: 22.3px;
+    background: url('https://www.adobe.com/content/dam/cc/icons/Adobe_Corporate_Horizontal_Red_HEX.svg') 25px 22.3px;
+    vertical-align: -5px;
+    margin-right: 10px;
+}
+
+.menu {
+    display: flex;
+}
+.menu_item {
+    position: relative;
+}
+.menu__title {
+    height: 64px;
+    display: flex;
+    align-items: center;
+}
+
+.dim {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.dim--open {
+    display: block;
+}
+
+.sub-menus {
+    display: none;
+    z-index: 10;
+    left: 0; right: 0;
+    margin: 0 auto;
+    position: absolute;
+    justify-content: space-around;
+    background-color: $back-gray;
+    max-width: 1440px;
+    width: 100%;
+}
+.dim--open .sub-menus {
+    display: flex;
+}
+
+.sub-menu-container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0 60px;
+}
+.sub-menu-container .menu__sub-menu {
+    padding : 0;
+}
+.sub-menu-container .menu__sub-menu + .menu__sub-menu {
+    padding: 20px 0 12px;
+}
+
+.menu__sub-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-menu__item--last:hover {
+    background: none;
+}
+
+.card--small {
+    margin: 40px 32px 60px;
+}
+
+.button-wrap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.button--search {
+    padding: 0;
+    border: none;
+    background-color: $white;
+}
+
+.button--sign-in {
+    width: 85px;
+    padding: 0 20px;
+    @include font-style($font-14, $fw-400, $gray);
+    &:hover {
+        color: $blue;
+    }
+}
+
+.acrobat-sign__card--big {
+    padding-left: 100px;
+    background-color: #d7f0ab;
+}
+.acrobat-sign__card--big .card--big__explanation {
+    max-width: 400px;
+}
+.cloud__card--big .card--big__explanation {
+    max-width: 450px;
+}
+
+.about {
+    padding: 50px 45px;
+    display: grid;
+    gap: 40px;
+}
+.acrobat-sign__about {
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+}
+.cloud__about {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card--double {
+    grid-column: 1 / 3;
+}
+
+.cloud__card--big {
+    padding-right: 100px;
+    background-color: skyblue;
+}
+
+.card--medium__list-acrobat {
+    color: $white;
+    font-weight: $fw-700;
+}
+.list-acrobat__title {
+    font-size: $font-18;
+    border-bottom: 2px solid $white;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+.list-acrobat__item {
+    font-size: $font-14;
+    padding-bottom: 16px;
+}
+.list-acrobat__link {
+    color: $white;
+    &:hover {
+        text-decoration: underline;
+    }
+}

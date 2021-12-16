@@ -7,11 +7,12 @@
 
 .menu__title {
     @include font-style($font-14, $fw-400, $gray);
+    padding: 0 20px;
     &::after {
         @include arrow;
     }
     &:hover {
-        background-color: $footer-backgray;
+        background-color: $hover-lightgray;
     }
 }
 .menu__title.on::after {
@@ -22,6 +23,7 @@
 
 .menu__sub-menu {
     padding-top: 40px;
+    padding-bottom: 60px;
 }
 .sub-menu__category {
     padding: 10px 32px;
@@ -39,17 +41,19 @@
     line-height: 1.4;
     padding: 8px 32px 4px;
     &:hover {
-        background-color: $footer-backgray;
+        background-color: $hover-lightgray;
     }
     &:hover .sub-menu__title {
         color: $blue;
     }
 }
+.sub-menu__item--img .sub-menu__link {
+    display: flex;
+}
 .sub-menu__icon {
     width: 26px;
     height: 26px;
     margin-right: 10px;
-    float: left;
 }
 .sub-menu__title {
     @include font-style($font-14, $fw-400, $gray);
@@ -90,28 +94,60 @@
     @include font-style($font-14, $fw-400, $blue);
 }
 
-.card__title {
-    font-weight: 700;
+.card {
     color: $black;
 }
-.card__category {
-    font-weight: $fw-700;
-    color: $black;
+.card__title, .card__category {
+    font-weight: 700;
 }
 .card__content {
-    color: $black;
     padding: 8px 0;
 }
 .card--big {
+    display: flex;
+    justify-content: center;
     width: 100%;
-    height: 650px;
+    min-height: 650px;
+}
+.card--big__explanation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: transparent;
+}
+.card--big__image {
+    height: 80%;
+    box-sizing: content-box;
+    min-height: 450px;
+    min-width: 450px;
+    max-height: 650px;
+    max-width: 650px;
+    overflow:hidden;
+    background-size: cover;
+    margin: 0 auto;
+
+}
+.card--big__category {
+    font-size: $font-18;
+    color: $black;
+    padding-bottom: 20px;
 }
 .card--big__title {
     font-size: $font-42;
+    padding-bottom: 25px;
 }
 .card--big__content, .card--medium__content {
     font-weight: $fw-500;
     font-size: $font-18;
+}
+.card--big__content {
+    margin-right: 100px;
+}
+.card--big__buttons {
+    padding: 20px 0;
+}
+.card--big__link {
+    padding-left: 16px;
 }
 .card__link {
     @include font-style($font-14, $fw-700, $black);
@@ -122,7 +158,7 @@
 
 .card--medium {
     padding: 36px 24px 24px;
-    width: 33.33%;
+    width: 100%;
     height: 500px;
     background-color: gold;
     &:hover {
@@ -134,35 +170,73 @@
     padding-bottom: 20px;
 }
 .card--medium__title {
-    font-size: 24px;
+    font-size: $font-24;
 }
 
 .card--small {
     width: 260px;
+    height: 100%;
 }
-.card--small__wrap {
+.card--pink__wrap {
     padding: 12px;
     padding-left: 32px;
     font-size: $font-14;
-    color: $black;
-    background-color: $card-pink;
 }
-.card--small__category {
+.card--pink {
+    background-color: $card-pink;
+    color: $black;
+}
+.card--pink__category {
     padding: 18px 0; 
 }
-.card--small__title {
+.card--pink__title {
     padding-bottom: 12px;
 }
-.card--small__content {
+.card--pink__content {
     padding-bottom: 20px;
     font-weight: $fw-400;
 }
-.card--small__link {
+.card--pink__link {
     font-weight: $fw-400;
     text-decoration: underline;
 }
-.card--small__image {
+.card--pink__image {
     width: 100%;
+}
+
+
+.card--white {
+    border: 1px solid #EAEAEA;
+    padding: 28px;
+}
+.card--white__title {
+    padding: 8px 0 4px;
+    font-size: $font-14;
+    color: $gray;
+}
+.card--white__content {
+    font-size: $font-12;
+    color: $footer-gray;
+}
+.card--white__link {
+    font-size: $font-14;
+    color: $blue;
+    font-weight: $fw-400;
+}
+
+
+.card--cloud__title {
+    font-size: $font-24;
+    font-weight: $fw-800;
+}
+.card--cloud__content {
+    font-size: $font-14;
+}
+.card--cloud__image {
+    display: block;
+    margin: 20px auto 0;
+    width: 100px;
+    height: 100px;
 }
 
 

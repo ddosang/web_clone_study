@@ -9,9 +9,6 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style_module.css">
-    <style>
-
-    </style>
 </head>
 
 <body>
@@ -21,9 +18,10 @@
 
         <ul class="menu__sub-menu">
             <h3 class="sub-menu__category">Featured products</h3>
-            <li class="sub-menu__item">
+            <li class="sub-menu__item sub-menu__item--img">
                 <a href="javascript:void(0)" class="sub-menu__link">
-                    <img src="https://www.adobe.com/content/dam/cc/icons/creativecloud-app.svg" alt="" class="sub-menu__icon">
+                    <img src="https://www.adobe.com/content/dam/cc/icons/creativecloud-app.svg" alt=""
+                        class="sub-menu__icon">
                     <div class="sub-menu-wrap">
                         <p class="sub-menu__title">What is Creative Cloud?</p>
                         <p class="sub-menu__content">Creative apps and services for everyone</p>
@@ -38,8 +36,8 @@
             </li>
             <li class="sub-menu__item">
                 <a href="javascript:void(0)" class="sub-menu__link">
-                    <p class="sub-menu__title">Photographers</ㅔ>
-                        <p class="sub-menu__content">Lightroom, Photoshop, and more</p>
+                    <p class="sub-menu__title">Photographers</p>
+                    <p class="sub-menu__content">Lightroom, Photoshop, and more</p>
                 </a>
             </li>
             <li class="sub-menu__item">
@@ -72,7 +70,6 @@
                 </a>
             </li>
         </ul>
-
     </li>
 
 
@@ -87,47 +84,82 @@
         View all Creative Cloud
     </a>
 
+    
     <section class="card--big">
         <article class="card card--big__explanation">
             <h4 class="card__title card--big__title">Business moves with Adobe Acrobat Sign.</h4>
-            <p class="card__content card--big__content">Keep your business moving with simple, secure e-signatures from Adobe.</p>
-            <a href="" class="button button--blue">See all plans</a>
-            <a href="" class="card__link card--big__link">Learn more</a>
-            </a>
+            <p class="card__content card--big__content">Keep your business moving with simple, secure e-signatures from
+                Adobe.</p>
+            <div class="card--big__buttons">
+                <a href="" class="button button--blue">See all plans</a>
+                <a href="" class="card__link card--big__link">Learn more</a>
+            </div>
+
         </article>
+        <img src="../turtle.png" alt="" class="card--big__image">
     </section>
+    
 
     <!-- card -->
 
     <!-- a 태그로 감싸고 싶은데, a 중첩 불가능 -->
     <!-- js로 article 에 click 이벤트를 주는 것이 나을듯. -->
-    <article class="card card--medium">
-        <h4 class="card__title card--medium__title">Adobe x Merck</h4>
-        <p class="card__content card--medium__content">Merck digitized procurement processes with help from Adobe Sign.</p>
-        <a href="" class="card__link card--medium__link">Find out how</a>
-        </a>
-    </article>
+    <!-- 대신 inner a를 hover 효과만 주고 a태그로 감싸는 방식으로 선택했다. -->
+    <a href="javascript:void(0)" class="card-wrap--link">
+        <article class="card card--medium">
+            <h4 class="card__title card--medium__title">Adobe x Merck</h4>
+            <p class="card__content card--medium__content">Merck digitized procurement processes with help from Adobe
+                Sign.</p>
+            <span href="" class="card__link card--medium__link">Find out how</span>
+            </span>
+        </article>
+    </a>
 
 
-
+    <a href="javascript:void(0)" class="card-wrap--link"></a>
     <article class="card card--medium">
         <p class="card__category card--medium__category">ADOBE DOCUMENT CLOUD FOR BUSINESS</p>
         <h4 class="card__title card--medium__title">PDF business is our business.</h4>
-        <p class="card__content card--medium__content">Run your operations faster and smarter with the productivity power of Acrobat and
+        <p class="card__content card--medium__content">Run your operations faster and smarter with the productivity
+            power of Acrobat and
             Adobe Sign.</p>
-        <a href="" class="card__link card--medium__link">Learn more</a>
+        <span href="" class="card__link card--medium__link">Learn more</span>
+        <!-- <img src="https://s7d1.scene7.com/is/image/TitanProd/DC-long-form-desktop-pod1@2xrevised?$png$&jpegSize=100&wid=500" alt="" class="card--medium__image"> -->
     </article>
+    </a>
 
-    <article class="card card--small">
-        <div class="card--small__wrap">
-            <p class="card__category card--small__category">THE CREATIVITY CONFERENCE</p>
-            <h4 class="card__title card--small__title">The MAX after-party is in full swing.</h4>
-            <p class="card__content card--small__content">Missed the creative bash of the year? Catch the highlights and 400+ sessions on demand.</p>
-            <a href="" class="card__link card--small__link">Watch now</a>
-        </div>
-        <img src="https://cc-prod.scene7.com/is/image/CCProdAuthor/Pre-MAX-promo-2021-Gnav-logo-set_dt_264x174?$pjpeg$&jpegSize=100&wid=264" alt="" class="card__image card--small__image">
-    </article>
+    <a href="javascript:void(0)" class="card-wrap--link">
+        <article class="card card--small card--pink">
+            <div class="card--pink__wrap">
+                <p class="card__category card--pink__category">THE CREATIVITY CONFERENCE</p>
+                <h4 class="card__title card--pink__title">The MAX after-party is in full swing.</h4>
+                <p class="card__content card--pink__content">Missed the creative bash of the year? Catch the highlights and
+                    400+ sessions on demand.</p>
+                <a href="" class="card__link card--pink__link">Watch now</a>
+            </div>
+            <img src="https://cc-prod.scene7.com/is/image/CCProdAuthor/Pre-MAX-promo-2021-Gnav-logo-set_dt_264x174?$pjpeg$&jpegSize=100&wid=264"
+                alt="" class="card__image card--pink__image">
+        </article>
+    </a>
 
+    <a href="javascript:void(0)" class="card-wrap--link">
+        <article class="card card--small card--white">
+            <h4 class="card__title card--white__title">Acrobat Pro DC</h4>
+            <p class="card__content card--white__content">Create, edit, and sign documents with our all-in-one PDF and e-signature solution.</p>
+            <a href="" class="card__link card--white__link">Start free trial</a>
+        </article>
+    </a>
+
+    <a href="javascript:void(0)" class="card-wrap--link">
+        <article class="card card--small card--white card--cloud">
+            <h4 class="card__title card--white__title card--cloud__title">Try the apps
+                <br>
+                in Creative Cloud</h4>
+            <p class="card__content card--white__content card--cloud__content">Try full versions of 20+ creative apps for desktop and mobile.</p>
+            <a href="" class="card__link card--white__link">Download and get started</a>
+            <img src="https://www.adobe.com/content/dam/shared/images/product-icons/svg/creative-cloud.svg" alt="adobe cloud image" class="card__image card--cloud__image">
+        </article>
+    </a>
 
 
     <!-- footer -->
