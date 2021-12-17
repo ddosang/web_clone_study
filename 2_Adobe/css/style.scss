@@ -110,13 +110,11 @@
     justify-content: flex-end;
     align-items: center;
 }
-
 .button--search {
     padding: 0;
     border: none;
     background-color: $white;
 }
-
 .button--sign-in {
     width: 85px;
     padding: 0 20px;
@@ -133,10 +131,6 @@
 .acrobat-sign__card--big .card--big__explanation {
     max-width: 400px;
 }
-.cloud__card--big .card--big__explanation {
-    max-width: 450px;
-}
-
 .about {
     padding: 50px 45px;
     display: grid;
@@ -145,21 +139,40 @@
 .acrobat-sign__about {
     grid-template: repeat(2, 1fr) / repeat(3, 1fr);
 }
-.cloud__about {
-    grid-template-columns: repeat(3, 1fr);
-}
 
-.card--double {
-    grid-column: 1 / 3;
+.cloud__card--big .card--big__explanation {
+    max-width: 450px;
 }
-
 .cloud__card--big {
     padding-right: 100px;
     background-color: skyblue;
 }
-
-.card--medium__list-acrobat {
+.cloud__about {
+    grid-template-columns: repeat(3, 1fr);
+}
+.card--medium {
+    background: url(../resource/emojimix-7.png) no-repeat;
+    background-size: 100%;
+    background-position: 0px 100px;
+}
+.card--double {
+    grid-column: 1 / 3;
+    background-image: url(../resource/emojimix-4.png);
+    background-size: 50%;
+    background-position: 50% 100px;
+}
+.card--babypink {
+    background-color: pink;
+}
+.card--black {
+    background-image: url(../resource/emojimix-10.png);
+    background-color: black;
     color: $white;
+}
+.card--list {
+    background-image: none;
+}
+.card--medium__list-acrobat {
     font-weight: $fw-700;
 }
 .list-acrobat__title {
@@ -173,8 +186,21 @@
     padding-bottom: 16px;
 }
 .list-acrobat__link {
-    color: $white;
+    color: inherit;
     &:hover {
         text-decoration: underline;
     }
 }
+.card--gold {
+    background-image: url(../resource/emojimix-18.png);
+    background-color: gold;
+}
+.card--blue {
+    background-image: url(../resource/emojimix-5.png);
+    background-color: lightblue;
+}
+.card--red {
+    background-image: url(../resource/emojimix-3.png);
+    background-color: red;
+}
+

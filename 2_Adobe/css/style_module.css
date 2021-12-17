@@ -221,7 +221,6 @@
 .card__link {
   font-size: 14px;
   font-weight: 700;
-  color: #000;
 }
 
 .card__link:hover {
@@ -232,7 +231,6 @@
   padding: 36px 24px 24px;
   width: 100%;
   height: 500px;
-  background-color: gold;
 }
 
 .card--medium:hover {
