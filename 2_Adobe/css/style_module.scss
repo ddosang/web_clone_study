@@ -17,7 +17,7 @@
         background-color: $hover-lightgray;
     }
 }
-.menu__title.on::after {
+.menu__item--open .menu__title::after {
     transform: rotate(225deg);
 }
 

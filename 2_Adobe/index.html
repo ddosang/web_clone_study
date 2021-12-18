@@ -21,7 +21,7 @@
                 <ul class="menu">
                     <li class="menu__item">
                         <h2 class="menu__title">Creativity & Design</h2>
-                        <div class="dim dim--open">
+                        <div class="dim">
                             <div class="sub-menus">
                                 <ul class="menu__sub-menu">
                                     <li class="sub-menu__item sub-menu__item--img">
@@ -583,14 +583,34 @@
             </nav>
 
             <div class="button-wrap">
-                <button class="button--search">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                        focusable="false">
-                        <path
-                            d="M14 2A8 8 0 0 0 7.4 14.5L2.4 19.4a1.5 1.5 0 0 0 2.1 2.1L9.5 16.6A8 8 0 1 0 14 2Zm0 14.1A6.1 6.1 0 1 1 20.1 10 6.1 6.1 0 0 1 14 16.1Z">
-                        </path>
-                    </svg>
-                </button>
+                <div class="search-wrap">
+                    <button class="button--search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            focusable="false">
+                            <path
+                                d="M14 2A8 8 0 0 0 7.4 14.5L2.4 19.4a1.5 1.5 0 0 0 2.1 2.1L9.5 16.6A8 8 0 1 0 14 2Zm0 14.1A6.1 6.1 0 1 1 20.1 10 6.1 6.1 0 0 1 14 16.1Z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="button--search--close">&#10005</button>
+
+                    <div class="dim--search">
+                        <section class="search-section">
+                            <form action="" class="search-form">
+                                <label for="search" class="txt-hide">Search bar</label>
+                                <input id="search type="text" class="search-bar" placeholder="Search">
+                                <button type="submit" class="button--search">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        focusable="false">
+                                        <path
+                                            d="M14 2A8 8 0 0 0 7.4 14.5L2.4 19.4a1.5 1.5 0 0 0 2.1 2.1L9.5 16.6A8 8 0 1 0 14 2Zm0 14.1A6.1 6.1 0 1 1 20.1 10 6.1 6.1 0 0 1 14 16.1Z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </form>
+                        </section>
+                    </div>
+                </div>
 
                 <a href="javascript:void(0)" class="button--sign-in">Sign In</a>
             </div>
@@ -1074,6 +1094,9 @@
         </section>
 
     </footer>
+    <script src="js/menu.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/search.js"></script>
 </body>
 
 </html>

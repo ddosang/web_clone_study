@@ -32,13 +32,14 @@
   margin-left: 5px;
   margin-right: 2.25px;
   vertical-align: 2px;
+  transition: transform .1s ease;
 }
 
 .menu__title:hover {
   background-color: #C4C4C4;
 }
 
-.menu__title.on::after {
+.menu__item--open .menu__title::after {
   -webkit-transform: rotate(225deg);
           transform: rotate(225deg);
 }

@@ -9,7 +9,7 @@
     border-bottom: 1px solid $border-gray;
 }
 
-.header-wrap{
+.header-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,7 +57,7 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.2);
 }
-.dim--open {
+.menu__item--open .dim {
     display: block;
 }
 
@@ -102,11 +102,67 @@
     justify-content: flex-end;
     align-items: center;
 }
-.button--search {
-    padding: 0;
-    border: none;
-    background-color: $white;
+.button--search.button--close {
+    display: none;
 }
+.button--search:hover {
+    fill: $blue;
+}
+.button--search--close {
+    display: none;
+    font-size: $font-24;
+}
+.button--open {
+    display: inline-block;
+}
+
+.dim--search {
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 20;
+    display: none;
+}
+.dim--search.dim--open {
+    display: flex;
+}
+.search-section {
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    left: 0; right: 0;
+    margin: 0 auto;
+    position: absolute;
+    background-color: $back-gray;
+    max-width: 1440px;
+    width: 100%;
+    padding: 20px 30px;
+}
+.search-form {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: content-box;
+    padding: 7px 10px;
+    margin: 0 20px;
+    height: 20px;
+    border: 1px solid #d3d3d3;
+    background-color: white;
+}
+.search-bar {
+    width: 100%;
+    border: none;
+    font-family: inherit;
+    @include font-style($font-16, $fw-300, $gray);
+}
+
+
 .button--sign-in {
     // width: 85px;
     padding: 0 20px;
@@ -236,6 +292,7 @@ footer {
     padding: 32px;
     background-color: white;
     position: relative;
+    z-index: 30;
 }
 .region__title {
     @include font-style($font-28, $fw-700, $black);

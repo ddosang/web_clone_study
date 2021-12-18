@@ -68,7 +68,11 @@ body {
 a {
 	color: inherit;
 }
-
+button {
+	padding: 0;
+	border: none;
+	background-color: white;
+}
 .txt-hide {
 	position: absolute;
 	margin: -1px;
