@@ -4,10 +4,10 @@
 }
 
 .menu__title {
+  padding: 0 20px;
   font-size: 14px;
   font-weight: 400;
   color: #2C2C2C;
-  padding: 0 20px;
 }
 
 .menu__title::after {
@@ -142,6 +142,7 @@
 
 .card {
   color: #000;
+  width: 100%;
 }
 
 .card__title, .card__category {
@@ -152,6 +153,15 @@
   padding: 8px 0;
 }
 
+.card__link {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.card__link:hover {
+  text-decoration: underline;
+}
+
 .card--big {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -159,7 +169,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
   min-height: 650px;
 }
 
@@ -174,20 +183,18 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: transparent;
 }
 
 .card--big__image {
-  height: 80%;
+  margin: 0 auto;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
+  height: 80%;
   min-height: 450px;
   min-width: 450px;
   max-height: 650px;
   max-width: 650px;
-  overflow: hidden;
   background-size: cover;
-  margin: 0 auto;
 }
 
 .card--big__category {
@@ -218,18 +225,8 @@
   padding-left: 16px;
 }
 
-.card__link {
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.card__link:hover {
-  text-decoration: underline;
-}
-
 .card--medium {
   padding: 36px 24px 24px;
-  width: 100%;
   height: 500px;
 }
 
@@ -249,17 +246,24 @@
 .card--small {
   width: 260px;
   height: 100%;
+  font-size: 14px;
+}
+
+.card-small__content {
+  font-weight: 400;
+}
+
+.card--small__link {
+  font-weight: 400;
 }
 
 .card--pink__wrap {
   padding: 12px;
   padding-left: 32px;
-  font-size: 14px;
 }
 
 .card--pink {
   background-color: #ff61f6;
-  color: #000;
 }
 
 .card--pink__category {
@@ -272,11 +276,9 @@
 
 .card--pink__content {
   padding-bottom: 20px;
-  font-weight: 400;
 }
 
 .card--pink__link {
-  font-weight: 400;
   text-decoration: underline;
 }
 
@@ -291,7 +293,6 @@
 
 .card--white__title {
   padding: 8px 0 4px;
-  font-size: 14px;
   color: #2C2C2C;
 }
 
@@ -301,18 +302,12 @@
 }
 
 .card--white__link {
-  font-size: 14px;
   color: #1473E6;
-  font-weight: 400;
 }
 
 .card--cloud__title {
   font-size: 24px;
   font-weight: 800;
-}
-
-.card--cloud__content {
-  font-size: 14px;
 }
 
 .card--cloud__image {
@@ -332,9 +327,12 @@
   color: #505050;
 }
 
-.menu--footer__link {
+.menu--footer__item {
   padding: 4px 0;
-  line-height: 17px;
+}
+
+.menu--footer__link {
+  line-height: 1.4;
   font-size: 12px;
   font-weight: 400;
   color: #4B4B4B;

@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <!-- list item -->
+    <!-- header navigation item -->
     <li class="menu__item">
         <h2 class="menu__title">Creativity & Design</h2>
 
@@ -84,9 +84,10 @@
         View all Creative Cloud
     </a>
 
-    
-    <section class="card--big">
-        <article class="card card--big__explanation">
+    <!-- cards -->
+    <!-- width 100% 인 영역. -->
+    <article class="card card--big">
+        <section class="card--big__explanation">
             <h4 class="card__title card--big__title">Business moves with Adobe Acrobat Sign.</h4>
             <p class="card__content card--big__content">Keep your business moving with simple, secure e-signatures from
                 Adobe.</p>
@@ -94,39 +95,33 @@
                 <a href="" class="button button--blue">See all plans</a>
                 <a href="" class="card__link card--big__link">Learn more</a>
             </div>
-
-        </article>
-        <img src="../turtle.png" alt="" class="card--big__image">
-    </section>
+        </section>
+        <img src="resource/turtle.png" alt="" class="card--big__image">
+    </article>
     
-
-    <!-- card -->
-
-    <!-- a 태그로 감싸고 싶은데, a 중첩 불가능 -->
-    <!-- js로 article 에 click 이벤트를 주는 것이 나을듯. -->
-    <!-- 대신 inner a를 hover 효과만 주고 a태그로 감싸는 방식으로 선택했다. -->
-    <a href="javascript:void(0)" class="card-wrap--link">
-        <article class="card card--medium">
+    
+    <!-- card--medium -->
+    <article class="card card--medium">
+        <a href="javascript:void(0)" class="card-wrap--link">
             <h4 class="card__title card--medium__title">Adobe x Merck</h4>
             <p class="card__content card--medium__content">Merck digitized procurement processes with help from Adobe
                 Sign.</p>
             <span href="" class="card__link card--medium__link">Find out how</span>
             </span>
-        </article>
-    </a>
-
-
-    <a href="javascript:void(0)" class="card-wrap--link"></a>
-    <article class="card card--medium">
-        <p class="card__category card--medium__category">ADOBE DOCUMENT CLOUD FOR BUSINESS</p>
-        <h4 class="card__title card--medium__title">PDF business is our business.</h4>
-        <p class="card__content card--medium__content">Run your operations faster and smarter with the productivity
-            power of Acrobat and
-            Adobe Sign.</p>
-        <span href="" class="card__link card--medium__link">Learn more</span>
-        <!-- <img src="https://s7d1.scene7.com/is/image/TitanProd/DC-long-form-desktop-pod1@2xrevised?$png$&jpegSize=100&wid=500" alt="" class="card--medium__image"> -->
+        </a>
     </article>
-    </a>
+
+
+    <article class="card card--medium">
+        <a href="javascript:void(0)" class="card-wrap--link"></a>
+            <p class="card__category card--medium__category">ADOBE DOCUMENT CLOUD FOR BUSINESS</p>
+            <h4 class="card__title card--medium__title">PDF business is our business.</h4>
+            <p class="card__content card--medium__content">Run your operations faster and smarter with the productivity
+                power of Acrobat and
+                Adobe Sign.</p>
+            <span href="" class="card__link card--medium__link">Learn more</span>
+        </a>
+    </article>
 
     <a href="javascript:void(0)" class="card-wrap--link">
         <article class="card card--small card--pink">
@@ -146,25 +141,25 @@
         <article class="card card--small card--white">
             <h4 class="card__title card--white__title">Acrobat Pro DC</h4>
             <p class="card__content card--white__content">Create, edit, and sign documents with our all-in-one PDF and e-signature solution.</p>
-            <a href="" class="card__link card--white__link">Start free trial</a>
+            <a href="" class="card__link card--small__link card--white__link">Start free trial</a>
         </article>
     </a>
 
     <a href="javascript:void(0)" class="card-wrap--link">
         <article class="card card--small card--white card--cloud">
-            <h4 class="card__title card--white__title card--cloud__title">Try the apps
+            <h4 class="card__title card--cloud__title card--cloud__title">Try the apps
                 <br>
                 in Creative Cloud</h4>
-            <p class="card__content card--white__content card--cloud__content">Try full versions of 20+ creative apps for desktop and mobile.</p>
-            <a href="" class="card__link card--white__link">Download and get started</a>
-            <img src="https://www.adobe.com/content/dam/shared/images/product-icons/svg/creative-cloud.svg" alt="adobe cloud image" class="card__image card--cloud__image">
+            <p class="card__content card--small_content">Try full versions of 20+ creative apps for desktop and mobile.</p>
+            <a href="" class="card__link card--small__link card--white__link">Download and get started</a>
+            <img src="https://www.adobe.com/content/dam/shared/images/product-icons/svg/creative-cloud.svg" alt="adobe cloud image" class="card--cloud__image">
         </article>
     </a>
 
 
     <!-- footer -->
     <ul class="menu--footer">
-        <p class="menu--footer__title">Experience Cloud</p>
+        <h4 class="menu--footer__title">Experience Cloud</h4>
         <li class="menu--footer__item">
             <a href="" class="menu--footer__link">What is Experience Cloud?</a>
         </li>

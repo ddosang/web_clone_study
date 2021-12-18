@@ -4,7 +4,6 @@
 .header {
     display: flex;
     justify-content: center;
-    // align-items: center;
     width: 100%;
     height: 64px;
     border-bottom: 1px solid $border-gray;
@@ -44,9 +43,6 @@
 .menu {
     display: flex;
 }
-.menu_item {
-    position: relative;
-}
 .menu__title {
     height: 64px;
     display: flex;
@@ -59,14 +55,14 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 .dim--open {
     display: block;
 }
 
 .sub-menus {
-    display: none;
+    display: flex;
     z-index: 10;
     left: 0; right: 0;
     margin: 0 auto;
@@ -75,9 +71,6 @@
     background-color: $back-gray;
     max-width: 1440px;
     width: 100%;
-}
-.dim--open .sub-menus {
-    display: flex;
 }
 
 .sub-menu-container {
@@ -96,7 +89,6 @@
     display: flex;
     flex-direction: column;
 }
-
 .sub-menu__item--last:hover {
     background: none;
 }
@@ -116,7 +108,7 @@
     background-color: $white;
 }
 .button--sign-in {
-    width: 85px;
+    // width: 85px;
     padding: 0 20px;
     @include font-style($font-14, $fw-400, $gray);
     &:hover {
@@ -127,29 +119,25 @@
 .acrobat-sign__card--big {
     padding-left: 100px;
     background-color: #d7f0ab;
-}
-.acrobat-sign__card--big .card--big__explanation {
-    max-width: 400px;
+    .card--big__explanation {
+        max-width: 400px;
+    }
 }
 .about {
     padding: 50px 45px;
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
-.acrobat-sign__about {
-    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
-}
 
-.cloud__card--big .card--big__explanation {
-    max-width: 450px;
-}
 .cloud__card--big {
     padding-right: 100px;
     background-color: skyblue;
+    .card--big__explanation {
+        max-width: 450px;
+    }
 }
-.cloud__about {
-    grid-template-columns: repeat(3, 1fr);
-}
+
 .card--medium {
     background: url(../resource/emojimix-7.png) no-repeat;
     background-size: 100%;
@@ -168,6 +156,18 @@
     background-image: url(../resource/emojimix-10.png);
     background-color: black;
     color: $white;
+}
+.card--gold {
+    background-image: url(../resource/emojimix-18.png);
+    background-color: gold;
+}
+.card--blue {
+    background-image: url(../resource/emojimix-5.png);
+    background-color: lightblue;
+}
+.card--red {
+    background-image: url(../resource/emojimix-3.png);
+    background-color: red;
 }
 .card--list {
     background-image: none;
@@ -191,16 +191,166 @@
         text-decoration: underline;
     }
 }
-.card--gold {
-    background-image: url(../resource/emojimix-18.png);
-    background-color: gold;
-}
-.card--blue {
-    background-image: url(../resource/emojimix-5.png);
-    background-color: lightblue;
-}
-.card--red {
-    background-image: url(../resource/emojimix-3.png);
-    background-color: red;
+
+footer {
+    background-color: $back-gray;
+    padding: 0 20px;
 }
 
+.menu--footer {
+    padding: 40px 0 20px;
+    width: 100%;
+}
+
+.menu--footer__item--last {
+    padding: 4px 0 32px;
+}
+
+.footer-menu-container {
+    width: 100%;
+    .menu--footer {
+        padding-bottom: 20px;
+    }
+}
+
+
+.dim--footer {
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 20;
+    display: none;
+}
+.dim--footer--open {
+    display: flex;
+}
+
+.region {
+    padding: 32px;
+    background-color: white;
+    position: relative;
+}
+.region__title {
+    @include font-style($font-28, $fw-700, $black);
+    margin-bottom: 8.4px;
+}
+.region__subtitle {
+    @include font-style($font-16, $fw-500, $gray);
+    margin-bottom: 19.4px;
+}
+.button--close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: gray;
+    font-size: 30px;
+}
+.region__list-region {
+    max-width: 80vw;
+    max-height: calc(100vh - 60px);
+    width: 80vw;
+    column-count: 5;
+}
+.list-region__title {
+    @include font-style($font-14, $fw-700, $gray);
+}
+.list-region__link {
+    font-size: $font-14;
+    color: $blue;
+    line-height: 1.4;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.featured {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.additional-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.featured {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.featured__title {
+    font-size: $font-14;
+}
+.featured__tools {
+    display: flex;
+    font-size: $font-12;
+    justify-content: center;
+}
+.tools__item {
+    padding: 8px;
+}
+.tools__item::before {
+    display: inline-block;
+    content: '';
+    background-image: url(../resource/emojimix-3.png);
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+}
+.tools__link {
+    vertical-align: 5px;
+}
+
+.region-sns {
+    display: flex;
+    height: 60px;
+    align-items: center;
+}
+.button--region {
+    display: inline-block;
+    background: none;
+    border: none;
+    font-size: 11px;
+}
+.button--region::before {
+    display: inline-block;
+    content: '';
+    background: url(../resource/world.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+    padding-right: 10px;
+    vertical-align: -5px;
+}
+.button--region::after {
+    @include arrow;
+}
+.list-sns {
+    display: flex;
+}
+.list-sns__item {
+    box-sizing: content-box;
+    width: 20px;
+    padding: 10px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+}
+.info__item::after {
+    display: inline-block;
+    content: '/';
+    margin: 0 10px;
+}
+.info__item:last-child::after {
+    display: none;
+}

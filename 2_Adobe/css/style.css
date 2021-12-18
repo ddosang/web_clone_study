@@ -59,10 +59,6 @@
   display: flex;
 }
 
-.menu_item {
-  position: relative;
-}
-
 .menu__title {
   height: 64px;
   display: -webkit-box;
@@ -79,7 +75,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .dim--open {
@@ -87,7 +83,9 @@
 }
 
 .sub-menus {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   z-index: 10;
   left: 0;
   right: 0;
@@ -98,12 +96,6 @@
   background-color: #FAFAFA;
   max-width: 1440px;
   width: 100%;
-}
-
-.dim--open .sub-menus {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .sub-menu-container {
@@ -162,7 +154,6 @@
 }
 
 .button--sign-in {
-  width: 85px;
   padding: 0 20px;
   font-size: 14px;
   font-weight: 400;
@@ -186,17 +177,9 @@
   padding: 50px 45px;
   display: -ms-grid;
   display: grid;
-  gap: 40px;
-}
-
-.acrobat-sign__about {
-  -ms-grid-rows: (1fr)[2];
   -ms-grid-columns: (1fr)[3];
-      grid-template: repeat(2, 1fr)/repeat(3, 1fr);
-}
-
-.cloud__card--big .card--big__explanation {
-  max-width: 450px;
+      grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
 }
 
 .cloud__card--big {
@@ -204,9 +187,8 @@
   background-color: skyblue;
 }
 
-.cloud__about {
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+.cloud__card--big .card--big__explanation {
+  max-width: 450px;
 }
 
 .card--medium {
@@ -232,6 +214,21 @@
   background-image: url(../resource/emojimix-10.png);
   background-color: black;
   color: #FFF;
+}
+
+.card--gold {
+  background-image: url(../resource/emojimix-18.png);
+  background-color: gold;
+}
+
+.card--blue {
+  background-image: url(../resource/emojimix-5.png);
+  background-color: lightblue;
+}
+
+.card--red {
+  background-image: url(../resource/emojimix-3.png);
+  background-color: red;
 }
 
 .card--list {
@@ -262,18 +259,244 @@
   text-decoration: underline;
 }
 
-.card--gold {
-  background-image: url(../resource/emojimix-18.png);
-  background-color: gold;
+footer {
+  background-color: #FAFAFA;
+  padding: 0 20px;
 }
 
-.card--blue {
-  background-image: url(../resource/emojimix-5.png);
-  background-color: lightblue;
+.menu--footer {
+  padding: 40px 0 20px;
+  width: 100%;
 }
 
-.card--red {
+.menu--footer__item--last {
+  padding: 4px 0 32px;
+}
+
+.footer-menu-container {
+  width: 100%;
+}
+
+.footer-menu-container .menu--footer {
+  padding-bottom: 20px;
+}
+
+.dim--footer {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 20;
+  display: none;
+}
+
+.dim--footer--open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.region {
+  padding: 32px;
+  background-color: white;
+  position: relative;
+}
+
+.region__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 8.4px;
+}
+
+.region__subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2C2C2C;
+  margin-bottom: 19.4px;
+}
+
+.button--close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: gray;
+  font-size: 30px;
+}
+
+.region__list-region {
+  max-width: 80vw;
+  max-height: calc(100vh - 60px);
+  width: 80vw;
+  -webkit-column-count: 5;
+          column-count: 5;
+}
+
+.list-region__title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2C2C2C;
+}
+
+.list-region__link {
+  font-size: 14px;
+  color: #1473E6;
+  line-height: 1.4;
+}
+
+.list-region__link:hover {
+  text-decoration: underline;
+}
+
+.featured {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.additional-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.featured {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.featured__title {
+  font-size: 14px;
+}
+
+.featured__tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tools__item {
+  padding: 8px;
+}
+
+.tools__item::before {
+  display: inline-block;
+  content: '';
   background-image: url(../resource/emojimix-3.png);
-  background-color: red;
+  width: 20px;
+  height: 20px;
+  background-size: 20px;
+}
+
+.tools__link {
+  vertical-align: 5px;
+}
+
+.region-sns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.button--region {
+  display: inline-block;
+  background: none;
+  border: none;
+  font-size: 11px;
+}
+
+.button--region::before {
+  display: inline-block;
+  content: '';
+  background: url(../resource/world.png) no-repeat;
+  width: 20px;
+  height: 20px;
+  background-size: 20px;
+  padding-right: 10px;
+  vertical-align: -5px;
+}
+
+.button--region::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-bottom-width: 1px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-color: #2c2c2c;
+  -webkit-transform-origin: 75% 75%;
+          transform-origin: 75% 75%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: -webkit-transform .1s ease;
+  transition: -webkit-transform .1s ease;
+  transition: transform .1s ease;
+  transition: transform .1s ease, -webkit-transform .1s ease;
+  margin-left: 5px;
+  margin-right: 2.25px;
+  vertical-align: 2px;
+}
+
+.list-sns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.list-sns__item {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  width: 20px;
+  padding: 10px;
+}
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 11px;
+}
+
+.info__item::after {
+  display: inline-block;
+  content: '/';
+  margin: 0 10px;
+}
+
+.info__item:last-child::after {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
