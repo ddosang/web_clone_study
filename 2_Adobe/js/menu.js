@@ -1,9 +1,16 @@
 const body = document.body;
 const header = document.querySelector('.header');
 const menuItems = document.querySelectorAll('.menu__item');
-const menuButtons = document.querySelectorAll('.menu__title');
 const dims = document.querySelectorAll('.dim');
 
+const dimMenu = document.querySelector('.dim--menu');
+const menu = document.querySelector('.menu');
+const menuButton = document.querySelector('.button--menu');
+const subMenuTitles = document.querySelectorAll('.sub-menu__category');
+
+
+const menuFooters = document.querySelectorAll('.menu--footer');
+const menuFooterTitles = document.querySelectorAll('.menu--footer__title');
 
 const MENU_OPEN = 'menu__item--open';
 const MENU_CLOSE = 'menu__item';
@@ -30,29 +37,63 @@ function headerScrolled() {
     lastScroll = currentScroll;
 }
 
-menuItems.forEach((item, index) => item.addEventListener('click', function () {
-    closeSearch();
+menuItems.forEach((item, index) => item.addEventListener('click', function (event) {
+    if (window.innerWidth >= 900) {
+        closeSearch();
+    }
 
     menuItems.forEach((item, index2) => {
-        if (index == index2) {
-            item.classList.toggle(MENU_OPEN);
-        }
-        else if (item.classList.contains(MENU_OPEN)) {
-            item.classList = MENU_CLOSE;
+        // event.target 검사 안해도 미디어쿼리 1 2단계에서는 동작했는데
+        // 3단계에서는 계속 꺼져서 보니까 이게 문제였음 와우...
+        if (event.target.classList.contains('menu__title')) {
+            if (index == index2) {
+                item.classList.toggle(MENU_OPEN);
+            }
+            else if (item.classList.contains(MENU_OPEN)) {
+                item.classList = MENU_CLOSE;
+            }
         }
     });
-
 }));
 
-
-dims.forEach(dim => dim.addEventListener('click', function (event) {
-    if (event.target.classList.contains(DIM_OPEN)) {
-        dim.classList.remove(DIM_OPEN);
+dims.forEach((dim, index) => dim.addEventListener('click', function(event){
+    if (event.target.classList.contains('dim')) {
+        menuItems.forEach((item) => {
+            if (item.classList.contains(MENU_OPEN)) {
+                item.classList = MENU_CLOSE;
+            }
+        })
+        
     }
 }));
+
 
 window.addEventListener('scroll', function () {
     menuItems.forEach(menuItem => menuItem.classList = MENU_CLOSE);
     const currentScroll = window.pageYOffset;
     headerScrolled();
+    // media query max-width 899
+    dimMenu.classList = "dim--menu";
+    subMenuTitles.forEach(title => title.classList = 'sub-menu__category');
 });
+
+
+// media query max-width 899
+menuButton.addEventListener('click', function() {
+    dimSearch.classList.toggle('dim--search--open');
+    dimMenu.classList.toggle('dim--menu--open');
+    menuButton.innerText = "menu";
+    if (dimMenu.classList.contains('dim--menu--open')) {
+        menuItems.forEach(item => item.classList = MENU_CLOSE);
+        subMenuTitles.forEach(title => title.classList = 'sub-menu__category');
+        menuButton.innerText = "close";
+    }
+});
+
+subMenuTitles.forEach(title => title.addEventListener('click', function() {
+    title.classList.toggle('sub-menu__category--open');
+}));
+
+menuFooterTitles.forEach((title, index) => title.addEventListener('click', function() {
+    menuFooters[index].classList.toggle('menu--footer--open');
+}));

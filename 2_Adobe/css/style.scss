@@ -18,9 +18,6 @@
 .scroll-down {
     transform: translateY(-64px);
 }
-// .scroll-up {
-//     transform: translateY(0);
-// }
 
 .main {
     position: relative;
@@ -42,6 +39,9 @@
 .menu-wrap {
     display: flex;
     align-items: center;
+}
+.button--menu {
+    display: none;
 }
 
 .title_logo {
@@ -136,13 +136,11 @@
 
 .dim--search {
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    position: fixed;
+    position: absolute;
     top: 60px;
     left: 0;
-    right: 0;
-    bottom: 0;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 20;
     display: none;
@@ -190,12 +188,14 @@
     }
 }
 
+.card--big__explanation {
+    max-width: 400px;
+}
+
 .acrobat-sign__card--big {
+    flex-direction: row-reverse;
     padding-left: 100px;
     background-color: #d7f0ab;
-    .card--big__explanation {
-        max-width: 400px;
-    }
 }
 .about {
     padding: 50px 45px;
@@ -207,21 +207,17 @@
 .cloud__card--big {
     padding-right: 100px;
     background-color: skyblue;
-    .card--big__explanation {
-        max-width: 450px;
-    }
 }
 
 .card--medium {
     background: url(../resource/emojimix-7.png) no-repeat;
-    background-size: 100%;
-    background-position: 0px 100px;
+    background-size: 80%;
+    background-position: 50% calc(50% + 50px);
 }
 .card--double {
     grid-column: 1 / 3;
     background-image: url(../resource/emojimix-4.png);
     background-size: 50%;
-    background-position: 50% 100px;
 }
 .card--babypink {
     background-color: pink;
@@ -268,14 +264,19 @@
 
 footer {
     background-color: $back-gray;
-    padding: 0 20px;
+    padding: 40px 20px 20px;
+}
+.footer__menu {
+    display: flex;
 }
 
 .menu--footer {
-    padding: 40px 0 20px;
+    padding-bottom: 20px;
     width: 100%;
 }
-
+.menu--footer__title {
+    line-height: 1.4;
+}
 .menu--footer__item--last {
     padding: 4px 0 32px;
 }
@@ -421,14 +422,21 @@ footer {
     align-items: center;
     font-size: 11px;
 }
+.info__item-wrap {
+    display: flex;
+}
 .info__item::after {
     display: inline-block;
     content: '/';
     margin: 0 10px;
 }
+.info__small {
+    color: #4B4B4B;
+}
 .info__item:last-child::after {
     display: none;
 }
+
 
 .stop-scrolling {
     height: 100%;
