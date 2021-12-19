@@ -1,4 +1,8 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8,6 +12,27 @@
   width: 100%;
   height: 64px;
   border-bottom: 1px solid #F3F3F3;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+  z-index: 10;
+  background-color: white;
+}
+
+.scroll-down {
+  -webkit-transform: translateY(-64px);
+          transform: translateY(-64px);
+}
+
+.scroll-up {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.main {
+  position: relative;
+  padding-top: 64px;
 }
 
 .header-wrap {
@@ -575,5 +600,10 @@ footer {
 
 .info__item:last-child::after {
   display: none;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */

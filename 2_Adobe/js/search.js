@@ -17,8 +17,8 @@ function closeSearch() {
 
 searchButton.addEventListener('click', function() {
     menuItems.forEach((item) => {
-        if (item.classList.contains('menu__item--open')) {
-            item.classList.remove('menu__item--open');
+        if (item.classList.contains(MENU_OPEN)) {
+            item.classList.remove(MENU_OPEN);
         }
     });
     openSearch();
