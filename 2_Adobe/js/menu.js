@@ -19,11 +19,11 @@ menuItems.forEach((item, index) => item.addEventListener('click', function() {
 
 
 dims.forEach(dim => dim.addEventListener('click', function(event) {
-    if (event.target.classList.contains('dim')) {
+    if (event.target.classList.contains('dim--open')) {
         dim.classList.remove('dim--open');
     }
 }));
 
 window.addEventListener('scroll', function() {
-    dims.forEach(dim => dim.classList = 'dim');
+    menuItems.forEach(menuItem => menuItem.classList = "menu__item");
 });
