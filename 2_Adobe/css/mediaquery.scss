@@ -92,6 +92,7 @@
         position: relative;
     }
     .menu__title {
+        height: auto;
         padding: 16px 35px 16px 24px;
         width: 100%;
     }
@@ -102,7 +103,7 @@
     }
 
     .dim {
-        height: 100%;
+        height: calc(100% - 140px);
         position: static;
         background-color: none;
     }
