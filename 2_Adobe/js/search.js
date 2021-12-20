@@ -1,7 +1,8 @@
 // const menuItems = document.querySelectorAll('.menu__item');
-const searchButton = document.querySelector('.button--search');
-const dimSearch = document.querySelector('.dim--search');
-const searchButtonClosed = document.querySelector('.button--search--close');
+const buttonWrap = header.querySelector('.button-wrap');
+const searchButton = buttonWrap.querySelector('.button--search');
+const dimSearch = buttonWrap.querySelector('.dim--search');
+const searchButtonClosed = buttonWrap.querySelector('.button--search--close');
 
 function openSearch() {
     dimSearch.classList.add('dim--open');

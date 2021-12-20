@@ -1,6 +1,7 @@
-const changeRegionButton = document.querySelector('.button--region');
-const dimFooter = document.querySelector('.dim--footer');
-const closeButton = document.querySelector('.button--close');
+const regionSNS = footer.querySelector('.region-sns');
+const changeRegionButton = regionSNS.querySelector('.button--region');
+const dimFooter = regionSNS.querySelector('.dim--footer');
+const closeButton = dimFooter.querySelector('.button--close');
 
 const DIM_FOOTER = 'dim--footer';
 const DIM_FOOTER_OPEN = 'dim--footer--open';

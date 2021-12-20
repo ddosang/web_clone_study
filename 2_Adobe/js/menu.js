@@ -1,16 +1,16 @@
 const body = document.body;
-const header = document.querySelector('.header');
-const menuItems = document.querySelectorAll('.menu__item');
-const dims = document.querySelectorAll('.dim');
+const header = body.querySelector('.header');
+const menuItems = header.querySelectorAll('.menu__item');
+const dims = header.querySelectorAll('.dim');
 
-const dimMenu = document.querySelector('.dim--menu');
-const menu = document.querySelector('.menu');
-const menuButton = document.querySelector('.button--menu');
-const subMenuTitles = document.querySelectorAll('.sub-menu__category');
+const dimMenu = header.querySelector('.dim--menu');
+const menu = dimMenu.querySelector('.menu');
+const menuButton = header.querySelector('.button--menu');
+const subMenuTitles = header.querySelectorAll('.sub-menu__category');
 
-
-const menuFooters = document.querySelectorAll('.menu--footer');
-const menuFooterTitles = document.querySelectorAll('.menu--footer__title');
+const footer = document.querySelector('footer');
+const menuFooters = footer.querySelectorAll('.menu--footer');
+const menuFooterTitles = footer.querySelectorAll('.menu--footer__title');
 
 const MENU_OPEN = 'menu__item--open';
 const MENU_CLOSE = 'menu__item';
