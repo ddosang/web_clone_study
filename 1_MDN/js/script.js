@@ -1,7 +1,9 @@
-const btns = document.querySelectorAll(".menu__btn");
-const subMenus = document.querySelectorAll(".menu__sub-menu");
+const header = document.querySelector('#header');
+const btns = header.querySelectorAll(".menu__btn");
+const subMenus = header.querySelectorAll(".menu__sub-menu");
 
-const btnSmall = document.querySelector(".btn-menu");
+const btnSmall = header.querySelector(".btn-menu");
+const dim = header.querySelector('.dim');
 
 function btnClicked(index) {
     btns[index].classList.toggle("on");
@@ -17,9 +19,16 @@ function btnClicked(index) {
     }
 }
 
-function btnSmallCilcked() {
+function btnSmallClicked() {
     btnSmall.classList.toggle("on");
+    if (btnSmall.innerText == "menu") {
+        btnSmall.textContent = "menu_open";
+    } else {
+        btnSmall.textContent = "menu";
+    }
 }
+
+// media query
 
 for (let i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", 
@@ -29,5 +38,12 @@ for (let i = 0; i < btns.length; i++) {
     );
 }
 
-btnSmall.addEventListener("click", btnSmallCilcked);
+btnSmall.addEventListener("click", btnSmallClicked);
 
+// dim
+
+dim.addEventListener('click', function(event) {
+    if (event.target.classList.contains('dim')) {
+        btnSmallClicked();
+    }
+});

@@ -104,7 +104,7 @@
 .menu__sub-menu {
     display: none;
     position: absolute;
-    /* min-width: 230px; */
+    min-width: 220px;
     z-index: 10;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -505,10 +505,24 @@
     .btn-menu {
         display: inline-block;
     }
-    .btn-menu.on ~ .header__content  {
+    .dim {
+        display: none;
+        height: 100vh;
+        position: absolute;
+        top: 110px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 10;
+    }
+
+    .btn-menu.on ~ .dim {
+        display: block;
+    }
+    .header__content  {
         display: grid;
         position: absolute;
-        top: 90px;
+        top: 0;
         left: 0;
         right: 0;
         padding: 0 24px 24px;
