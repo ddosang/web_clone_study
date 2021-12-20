@@ -9,6 +9,7 @@
 
 .menu__title {
     padding: 0 20px;
+    cursor: pointer;
     @include font-style($font-14, $fw-400, $gray);
     &::after {
         @include arrow;

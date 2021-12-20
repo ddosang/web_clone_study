@@ -534,6 +534,7 @@ footer {
   background: none;
   border: none;
   font-size: 11px;
+  cursor: pointer;
 }
 
 .button--region::before {

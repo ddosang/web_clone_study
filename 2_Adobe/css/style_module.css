@@ -5,6 +5,7 @@
 
 .menu__title {
   padding: 0 20px;
+  cursor: pointer;
   font-size: 14px;
   font-weight: 400;
   color: #2C2C2C;
