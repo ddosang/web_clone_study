@@ -85,6 +85,7 @@
         width: calc(100% - 20px);
         background-color: white;
         height: 100%;
+        overflow-y: scroll;
     }
 
     .menu__item {
@@ -100,23 +101,15 @@
         right: 10px;
     }
 
-
-
     .dim {
-        height: 0;
+        height: 100%;
+        position: static;
+        background-color: none;
     }
     .sub-menus {
-        position: static;
-        overflow: hidden;
         flex-direction: column;
     }
-    .sub-menu-container {
-        padding: 0;
-    }
-    .sub-menu-container .menu__sub-menu + .menu__sub-menu {
-        padding: 0;
-    }
-    .menu__sub-menu {
+    .sub-menu-container, .sub-menu-container .menu__sub-menu + .menu__sub-menu, .menu__sub-menu {
         padding: 0;
     }
     .sub-menu__category {

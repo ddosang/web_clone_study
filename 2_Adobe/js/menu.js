@@ -90,8 +90,17 @@ menuButton.addEventListener('click', function() {
     }
 });
 
-subMenuTitles.forEach(title => title.addEventListener('click', function() {
-    title.classList.toggle('sub-menu__category--open');
+subMenuTitles.forEach((title, index) => title.addEventListener('click', function(event) {
+    subMenuTitles.forEach((title, index2) => {
+        if (event.target.classList.contains('sub-menu__category')) {
+            if (index == index2) {
+                title.classList.toggle('sub-menu__category--open');
+            }
+            else if (title.classList.contains('sub-menu__category--open')) {
+                title.classList = "sub-menu__category";
+            }
+        }
+    });
 }));
 
 menuFooterTitles.forEach((title, index) => title.addEventListener('click', function() {
