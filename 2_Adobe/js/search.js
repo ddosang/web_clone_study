@@ -3,6 +3,8 @@ const buttonWrap = header.querySelector('.button-wrap');
 const searchButton = buttonWrap.querySelector('.button--search');
 const dimSearch = buttonWrap.querySelector('.dim--search');
 const searchButtonClosed = buttonWrap.querySelector('.button--search--close');
+const searchBar = dimSearch.querySelector('.search-bar');
+const searchButtonInBar = dimSearch.querySelector('.button--input-search');
 
 function openSearch() {
     dimSearch.classList.add('dim--open');
@@ -49,3 +51,10 @@ window.addEventListener('scroll', function() {
     closeSearch();
 });
 
+searchBar.addEventListener('keyup', function(event) {
+    if (event.target.value == "") {
+        searchButton.innerText = "search";
+    } else {
+        searchButtonInBar.innerText = "close";
+    }
+});
