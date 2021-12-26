@@ -214,4 +214,19 @@
     .card--medium {
         background-size: 70%;
     }
+    .region {
+        padding: 20px;
+        height: 100%;
+        overflow-y: auto;
+    }
+    .button--close {
+        top: 5px;
+        right: 15px;
+    } 
+    .region__list-region {
+        max-width: 100vw;
+        width: 100vw;
+        height: 100%;
+        column-count: auto;
+    }
 }
