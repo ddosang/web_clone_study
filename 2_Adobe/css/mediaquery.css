@@ -183,6 +183,20 @@
     margin: 0;
     width: calc(100% - 20px);
   }
+  .card--medium__list-acrobat {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .list-acrobat__sub-list {
+    width: 50%;
+    padding: 0 10px;
+    height: 100%;
+  }
   .footer__menu {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
